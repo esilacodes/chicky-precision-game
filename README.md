@@ -1,5 +1,7 @@
 # chicky-precision-game
 A strategic arcade game built with Java Swing featuring a LIFO stomach mechanic.
+
+
 🐥 Chicky Precision
 Chicky Precision is a strategic arcade game developed with Java Swing. The game challenges players to reach an exact target food count within a limited time while managing a unique "Stomach" system based on real-world data structures.
 
