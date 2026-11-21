@@ -499,6 +499,9 @@ public class GamePanel extends JPanel implements ActionListener {
     public void setScore(int score) { this.score = score; }
     public int getLevel() { return level; }
     public void setLevel(int level) { this.level = level; }
+    public Caterpillar getCaterpillar() { return caterpillar; }
+    public void setCaterpillar(Caterpillar caterpillar) { this.caterpillar = caterpillar; }
+    public void setBirdPosition(int x, int y) { this.birdX = x; this.birdY = y; }
     public void setDeathReason(String reason) { this.deathReason = reason; }
     public Stack<Integer> getStomach() { return stomach; }
     public void setCurrentSum(int sum) { this.currentSum = sum; }

@@ -39,13 +39,28 @@ If you accidentally eat too much, Chicky turns **RED** from overfeeding! You mus
 
 ---
 
+## 🐛 Caterpillar Evolution & Bonus Mechanic
+
+Every 3 levels (`Level % 3 == 0`), a rare **Caterpillar** spawns at a random position on the field. Players are presented with a high-reward time-sensitive challenge:
+
+| 🐛 Stage 1: The Caterpillar (+500 Bonus) | 🦋 Stage 2: The Butterfly (Too Late!) |
+| :---: | :---: |
+| <img src="assets/screenshots/caterpillar.png" alt="Caterpillar Stage" width="400"/> | <img src="assets/screenshots/butterfly.png" alt="Butterfly Stage" width="400"/> |
+| **Catch within 2.5s for +500 PTS & Instant Level Up!** | **Transforms into a butterfly and flutters away—no bonus!** |
+
+- **0.0s – 2.5s (Tırtıl Evresi):** Segmented green caterpillar with a floating `+500` badge. Catching it awards **+500 bonus points** and **instantly clears the level**!
+- **2.5s – 4.5s (Kelebek Evresi):** Undergoes metamorphosis into a fluttering purple butterfly. Once transformed, it can no longer be caught or eaten.
+- **After 4.5s:** The butterfly flies off-screen and disappears completely.
+
+---
+
 ## 🕹️ Features & Mechanics
 
 - 🎯 **Precision Counting:** Reach the randomly generated target sum perfectly. Not one more, not one less!
 - 🥞 **LIFO Stomach System:** Every grain swallowed is stored in `java.util.Stack`. The last item eaten is always the first one popped.
 - 🤮 **Vomiting Mechanic (Spacebar):** If you overshoot the target, consume a vomit charge to remove the topmost item from your stomach stack.
 - 🦊 **Lethal Predators:** Quick-moving predators patrol the airspace. A single contact results in an instant Game Over.
-- 🐛 **Caterpillar Evolution Bonus:** Catch green caterpillars for a massive **+500 points** before they flutter away as butterflies!
+- 🐛 **Caterpillar Metamorphosis:** High-stakes bonus event every 3 levels to accelerate your score!
 - 🔴 **Dynamic Visual Feedback:** 
   - Chicky turns bright red when overfed.
   - Timer pulses in red during the critical final 10 seconds.
@@ -98,6 +113,8 @@ chicky-precision-game/
 │       ├── main-menu.png       # Menu & instructions screen
 │       ├── gameplay-1.png      # In-game action with HUD & stack display
 │       ├── gameplay-2.png      # Overfed red state & vomit warning
+│       ├── caterpillar.png     # Level 3 caterpillar stage (+500 bonus)
+│       ├── butterfly.png       # Transformed fluttering butterfly
 │       └── game-over.png       # Game over overlay with final score
 └── MainGame/
     ├── build.xml
